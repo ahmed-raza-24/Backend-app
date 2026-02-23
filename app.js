@@ -13,5 +13,13 @@ const notes = []
 app.post("/notes", (req, res)=>{
 
     console.log(req.body)
+
+    notes.push(req.body)
+
     res.send("notes created")
+})
+
+app.get("/notes", (req, res)=>{
+    res.send(notes)
+    console.log(req.body)
 })
