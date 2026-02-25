@@ -29,3 +29,9 @@ app.delete("/notes/:index", (req, res)=>{
 
     res.send("note deleted successfully")
 })
+
+app.patch("/notes/:index", (req, res)=>{
+    notes [req.params.index].description = req.body.description
+
+    res.send("Notes update successfully")
+})
